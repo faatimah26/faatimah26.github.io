@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coffee Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- bootstrap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- bootstrap links -->
+    <!-- fonts links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <!-- fonts links -->
+
+</head>
+<body>
+  <div class="all-content">
+   
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg" id="navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" id="logo"><img src="./images/logo2.jpg" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fa-solid fa-bars" style="color: white; font-size: 23px;"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#produk">Produk</a>
+          </li> 
+        </ul>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <!-- navbar -->
+  <a href="#" onclick="toggleCart()">
+    <i class="fa-solid fa-cart-shopping" style="position: fixed; top: 50px; right: 10px; font-size: 24px;"></i>
+</a>
+  <div id="cartSidebar" class="cart-sidebar">
+    <h2>Keranjang Belanja</h2>
+    <ul id="cartItems"></ul>
+    <p id="totalPrice">Total: Rp0</p>
+    <button onclick="toggleCart()">Tutup</button>
+    <button id="checkoutButton" onclick="checkout()">Checkout</button>
+</div>
+
+
+ 
+  
+<!-- home section -->
+   <section id="home">
+    <div class="content">
+      <h3>Start Your Day With a <br> Aceng Coffee</h3>
+      <p>Pasti Enak
+         <br>Gaenak Balikin aja
+      </p>
+      <button id="btn">Beli Sekarang</button>
+    </div>
+   </section>
+
+<!-- home section -->
+
+<!-- menu -->
+<section class="produk" id="produk">
+  <div class="container">
+  <div class="heading3">Produk</div>
+</div>
+  <div class="container" id="container2">
+  <div class="row">
+    <div class="col-md-3 py-3 py-md-0">
+      <div class="card">
+        <img src="./images/WhatsApp Image 2024-10-22 at 17.21.29_91594f29.jpg" alt="">
+        <div class="card-body">
+          <div class="star text-center">
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <h3>KopiSusu Gold Blend</h3>
+          <p>
+            Rp21.500 
+            <span style="cursor: pointer;" onclick="addToCart('KopiSusu Gold Blend', 21.500, './images/WhatsApp Image 2024-10-22 at 17.21.29_91594f29.jpg')">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </span>
+          </p>
+          
+
+<!-- Lakukan hal yang sama untuk produk lainnya -->
+
+
+
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 py-3 py-md-0">
+      <div class="card">
+        <img src="./images/WhatsApp Image 2024-10-22 at 17.21.29_e2e89ba2.jpg" alt="">
+        <div class="card-body">
+          <div class="star text-center">
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <h3>Arabica Luwak Liar</h3>
+          <p>
+            Rp27.500 
+            <span style="cursor: pointer;" onclick="addToCart('Arabica Luwak Liar', 27.500, './images/WhatsApp Image 2024-10-22 at 17.21.29_e2e89ba2.jpg')">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 py-3 py-md-0">
+      <div class="card">
+        <img src="./images/WhatsApp Image 2024-10-22 at 17.21.30_55fda76e.jpg" alt="">
+        <div class="card-body">
+          <div class="star text-center">
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <h3>Gold BreakFast Blend</h3>
+          <p>
+            Rp30.500 
+            <span style="cursor: pointer;" onclick="addToCart('Gold Breakfast Blend', 30.500, './images/WhatsApp Image 2024-10-22 at 17.21.30_55fda76e.jpg')">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 py-3 py-md-0">
+      <div class="card">
+        <img src="./images/WhatsApp Image 2024-10-22 at 17.21.30_faa3481b.jpg" alt="">
+        <div class="card-body">
+          <div class="star text-center">
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <h3>Aroma Blend</h3>
+          <p>
+            Rp39.500 
+            <span style="cursor: pointer;" onclick="addToCart('Aroma Blend', 39.500, './images/WhatsApp Image 2024-10-22 at 17.21.30_faa3481b.jpg')">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" style="margin-top: 50px;">
+    <div class="col-md-3 py-3 py-md-0">
+      <div class="card">
+        <img src="./images/WhatsApp Image 2024-10-22 at 17.21.31_2fb80190.jpg" alt="">
+        <div class="card-body">
+          <div class="star text-center">
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <h3>Exotic Blend</h3>
+          <p>
+            Rp45.500 
+            <span style="cursor: pointer;" onclick="addToCart('Exotic Blend', 45.500, './images/WhatsApp Image 2024-10-22 at 17.21.31_2fb80190.jpg')">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 py-3 py-md-0">
+      <div class="card">
+        <img src="./images/WhatsApp Image 2024-10-22 at 17.21.31_61f7ef2b.jpg" alt="">
+        <div class="card-body">
+          <div class="star text-center">
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <h3>Arabica Jawa</h3>
+          <p>
+            Rp49.500 
+            <span style="cursor: pointer;" onclick="addToCart('Arabica Jawa', 49500, './images/WhatsApp Image 2024-10-22 at 17.21.31_61f7ef2b.jpg')">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 py-3 py-md-0">
+      <div class="card">
+        <img src="./images/WhatsApp Image 2024-10-22 at 17.21.31_637c5073.jpg" alt="">
+        <div class="card-body">
+          <div class="star text-center">
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <h3>Whole Bean Coffee</h3>
+          <p>
+            Rp55.500 
+            <span style="cursor: pointer;" onclick="addToCart('Whole Bean Coffe', 55.500, './images/.jpg')">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 py-3 py-md-0">
+      <div class="card">
+        <img src="./images/WhatsApp Image 2024-10-22 at 17.21.32_f7d3d9ad.jpg" alt="">
+        <div class="card-body">
+          <div class="star text-center">
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <h3>Arabica Coffee Beans</h3>
+          <p>
+            Rp59.500 
+            <span style="cursor: pointer;" onclick="addToCart('Arabica Coffe Beans', 59.500, './images/WhatsApp Image 2024-10-22 at 17.21.32_f7d3d9ad.jpg')">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+<!-- menu -->
+
+<div class="about" id="about">
+  <div class="container">
+  <div class="heading">About</div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <img src="./images/logo1.jpg" alt="">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h3>Nama Anggota:</h3>
+        <p>Muhammad Fachry Syahrizal - 202143501394
+        <p>Sri Sulastri - 202443570030
+        <p>Fatimah Azahrah - 202143501356
+        <p>Muhammad Fikri - 202143501414
+        <p>Muchamad Ryan Setiadi - 202143501413
+        <p>Muhammad Rafif Shidqi - 202143501359
+        <p>Tommy Kurniawan - 202143501377
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+   <!-- footer -->
+   <footer id="footer">
+    <div class="footer-logo text-center"><img src="./images/logo2.jpg" alt=""></div>
+</footer>
+   <!-- footer -->
+
+   <a href="#" class="arrow"><i><img src="./images/up-arrow.png" alt="" width="50px"></i></a>
+
+
+
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   <script src="script.js"></script>
+
+</body>
+</html>
